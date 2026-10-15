@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgDungeon" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0a0814" />
+      <stop offset="60%" stop-color="#181329" />
+      <stop offset="100%" stop-color="#2c1a0c" />
+    </linearGradient>
+    <linearGradient id="amberGoldPixel" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="50%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#ea580c" />
+    </linearGradient>
+    <linearGradient id="hpPlayer" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e" />
+      <stop offset="100%" stop-color="#16a34a" />
+    </linearGradient>
+    <linearGradient id="hpEnemy" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444" />
+      <stop offset="100%" stop-color="#dc2626" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Dungeon Arena -->
+  <rect width="800" height="500" fill="url(#bgDungeon)" />
+
+  <!-- Pixel Stone Wall Grid Background -->
+  <g opacity="0.15" stroke="#f59e0b" stroke-width="1.5">
+    <line x1="0" y1="50" x2="800" y2="50" />
+    <line x1="0" y1="110" x2="800" y2="110" />
+    <line x1="0" y1="170" x2="800" y2="170" />
+    <line x1="0" y1="230" x2="800" y2="230" />
+    <line x1="0" y1="290" x2="800" y2="290" />
+    <line x1="0" y1="350" x2="800" y2="350" />
+    <line x1="80" y1="0" x2="80" y2="350" />
+    <line x1="160" y1="0" x2="160" y2="350" />
+    <line x1="240" y1="0" x2="240" y2="350" />
+    <line x1="320" y1="0" x2="320" y2="350" />
+    <line x1="400" y1="0" x2="400" y2="350" />
+    <line x1="480" y1="0" x2="480" y2="350" />
+    <line x1="560" y1="0" x2="560" y2="350" />
+    <line x1="640" y1="0" x2="640" y2="350" />
+    <line x1="720" y1="0" x2="720" y2="350" />
+  </g>
+
+  <!-- Pixel Torches on Wall -->
+  <!-- Torch Left -->
+  <g transform="translate(100, 140)">
+    <rect x="-4" y="0" width="8" height="24" fill="#78350f" />
+    <circle cx="0" cy="-6" r="16" fill="#f59e0b" opacity="0.25" filter="blur(8px)" />
+    <polygon points="-6,0 0,-16 6,0" fill="#ea580c" />
+    <polygon points="-3,-2 0,-12 3,-2" fill="#fbbf24" />
+  </g>
+  <!-- Torch Right -->
+  <g transform="translate(700, 140)">
+    <rect x="-4" y="0" width="8" height="24" fill="#78350f" />
+    <circle cx="0" cy="-6" r="16" fill="#f59e0b" opacity="0.25" filter="blur(8px)" />
+    <polygon points="-6,0 0,-16 6,0" fill="#ea580c" />
+    <polygon points="-3,-2 0,-12 3,-2" fill="#fbbf24" />
+  </g>
+
+  <!-- Arena Floor -->
+  <polygon points="0,350 800,350 800,500 0,500" fill="#130e1f" />
+  <line x1="0" y1="350" x2="800" y2="350" stroke="#f59e0b" stroke-width="3" opacity="0.6" />
+
+  <!-- Top Title Bar: CLASH OF LEGENDS -->
+  <rect x="220" y="20" width="360" height="42" rx="6" fill="#0d0a17" stroke="#f59e0b" stroke-width="2" filter="drop-shadow(0 4px 15px rgba(245,158,11,0.3))" />
+  <text x="400" y="48" font-family="'Courier New', monospace" font-weight="900" font-size="20" fill="url(#amberGoldPixel)" text-anchor="middle" letter-spacing="3">⚔️ CLASH OF LEGENDS ⚔️</text>
+
+  <!-- Player HUD (Guerrero - Yoinser León) -->
+  <g transform="translate(60, 80)">
+    <rect width="260" height="85" rx="8" fill="#0b0816" stroke="#f59e0b" stroke-width="1.8" />
+    <text x="16" y="26" font-family="'Courier New', monospace" font-weight="900" font-size="14" fill="#ffffff">GUERRERO (Yoinser)</text>
+    <text x="16" y="44" font-family="'Courier New', monospace" font-size="11" fill="#f59e0b">CLASE: Tanque Físico</text>
+    <!-- HP Bar -->
+    <text x="16" y="65" font-family="'Courier New', monospace" font-weight="bold" font-size="11" fill="#94a3b8">HP:</text>
+    <rect x="44" y="55" width="150" height="12" rx="3" fill="#1e182e" stroke="#37314d" stroke-width="1" />
+    <rect x="45" y="56" width="130" height="10" rx="2" fill="url(#hpPlayer)" />
+    <text x="202" y="65" font-family="'Courier New', monospace" font-weight="bold" font-size="10" fill="#22c55e">130/150</text>
+  </g>
+
+  <!-- Enemy HUD (Mago Oscuro) -->
+  <g transform="translate(480, 80)">
+    <rect width="260" height="85" rx="8" fill="#0b0816" stroke="#ea580c" stroke-width="1.8" />
+    <text x="16" y="26" font-family="'Courier New', monospace" font-weight="900" font-size="14" fill="#ffffff">MAGO DEL ABISMO</text>
+    <text x="16" y="44" font-family="'Courier New', monospace" font-size="11" fill="#ea580c">CLASE: Hechicero Elemental</text>
+    <!-- HP Bar -->
+    <text x="16" y="65" font-family="'Courier New', monospace" font-weight="bold" font-size="11" fill="#94a3b8">HP:</text>
+    <rect x="44" y="55" width="150" height="12" rx="3" fill="#1e182e" stroke="#37314d" stroke-width="1" />
+    <rect x="45" y="56" width="95" height="10" rx="2" fill="url(#hpEnemy)" />
+    <text x="202" y="65" font-family="'Courier New', monospace" font-weight="bold" font-size="10" fill="#ef4444">95/150</text>
+  </g>
+
+  <!-- Pixel Art Characters on Field -->
+  <!-- Player Warrior (Left) -->
+  <g transform="translate(180, 240)">
+    <!-- Shadow -->
+    <ellipse cx="20" cy="100" rx="45" ry="12" fill="#000000" opacity="0.6" />
+    <!-- Pixel Body - Armor -->
+    <rect x="0" y="20" width="40" height="50" fill="#475569" stroke="#1e293b" stroke-width="2" />
+    <rect x="5" y="25" width="30" height="20" fill="#f59e0b" opacity="0.8" />
+    <!-- Helmet -->
+    <rect x="5" y="-10" width="30" height="30" fill="#64748b" stroke="#0f172a" stroke-width="2" />
+    <rect x="10" y="0" width="20" height="6" fill="#0f172a" />
+    <!-- Eyes glow -->
+    <rect x="13" y="1" width="5" height="4" fill="#38bdf8" />
+    <rect x="22" y="1" width="5" height="4" fill="#38bdf8" />
+    <!-- Sword -->
+    <rect x="38" y="0" width="8" height="70" fill="#cbd5e1" stroke="#334155" stroke-width="1.5" transform="rotate(25, 38, 0)" />
+    <rect x="32" y="50" width="24" height="6" fill="#f59e0b" transform="rotate(25, 38, 0)" />
+    <!-- Shield -->
+    <polygon points="-15,20 0,15 0,70 -15,55" fill="#d97706" stroke="#78350f" stroke-width="2" />
+  </g>
+
+  <!-- Combat Clash Sparks / Magic -->
+  <g transform="translate(380, 260)">
+    <circle cx="0" cy="0" r="35" fill="#f59e0b" opacity="0.3" filter="blur(10px)" />
+    <polygon points="-10,-10 15,-20 5,5 25,10 -5,20 0,5 -20,5" fill="#fbbf24" />
+    <text x="35" y="-20" font-family="'Courier New', monospace" font-weight="900" font-size="16" fill="#ea580c">¡GOLPE CRÍTICO! -30 HP</text>
+  </g>
+
+  <!-- Enemy Mage (Right) -->
+  <g transform="translate(580, 230)">
+    <!-- Shadow -->
+    <ellipse cx="20" cy="110" rx="45" ry="12" fill="#000000" opacity="0.6" />
+    <!-- Robe -->
+    <polygon points="5,20 35,20 50,100 -10,100" fill="#3b0764" stroke="#1e1b4b" stroke-width="2" />
+    <!-- Hood -->
+    <polygon points="5,20 20,-15 35,20" fill="#581c87" stroke="#1e1b4b" stroke-width="2" />
+    <!-- Eyes inside hood -->
+    <rect x="13" y="5" width="4" height="4" fill="#a855f7" />
+    <rect x="23" y="5" width="4" height="4" fill="#a855f7" />
+    <!-- Staff with Orb -->
+    <rect x="-10" y="-10" width="6" height="110" fill="#78350f" />
+    <circle cx="-7" cy="-20" r="14" fill="#a855f7" filter="drop-shadow(0 0 10px #a855f7)" />
+  </g>
+
+  <!-- Bottom Command Interface (Retro RPG Battle Menu) -->
+  <g transform="translate(60, 395)">
+    <rect width="680" height="85" rx="10" fill="#0b0816" stroke="#f59e0b" stroke-width="2" />
+    
+    <!-- Action Options -->
+    <g transform="translate(25, 22)">
+      <rect x="0" y="0" width="145" height="42" rx="6" fill="#f59e0b" />
+      <text x="72" y="26" font-family="'Courier New', monospace" font-weight="900" font-size="11" fill="#0b0816" text-anchor="middle">⚔️ ATACAR CON ARMA</text>
+    </g>
+
+    <g transform="translate(185, 22)">
+      <rect x="0" y="0" width="145" height="42" rx="6" fill="#1e182e" stroke="#37314d" stroke-width="1.5" />
+      <text x="72" y="26" font-family="'Courier New', monospace" font-weight="bold" font-size="11" fill="#cbd5e1" text-anchor="middle">🛡️ POSTURA DEFENSIVA</text>
+    </g>
+
+    <g transform="translate(345, 22)">
+      <rect x="0" y="0" width="145" height="42" rx="6" fill="#1e182e" stroke="#37314d" stroke-width="1.5" />
+      <text x="72" y="26" font-family="'Courier New', monospace" font-weight="bold" font-size="11" fill="#cbd5e1" text-anchor="middle">🧪 USAR POCIÓN</text>
+    </g>
+
+    <g transform="translate(505, 22)">
+      <rect x="0" y="0" width="145" height="42" rx="6" fill="#1e182e" stroke="#37314d" stroke-width="1.5" />
+      <text x="72" y="26" font-family="'Courier New', monospace" font-weight="bold" font-size="11" fill="#cbd5e1" text-anchor="middle">📜 SALUDO DE CLASE</text>
+    </g>
+  </g>
+</svg>

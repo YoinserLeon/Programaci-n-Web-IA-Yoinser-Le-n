@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="rmBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06110f" />
+      <stop offset="50%" stop-color="#0b171f" />
+      <stop offset="100%" stop-color="#1b1206" />
+    </linearGradient>
+    <linearGradient id="portalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a3e635" />
+      <stop offset="50%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16222f" />
+      <stop offset="100%" stop-color="#0d151e" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#rmBg)" />
+
+  <!-- Portal Aura -->
+  <ellipse cx="700" cy="120" rx="140" ry="140" fill="url(#portalGrad)" opacity="0.12" filter="blur(50px)" />
+  <circle cx="100" cy="400" r="100" fill="#f59e0b" opacity="0.08" filter="blur(40px)" />
+
+  <!-- App Window -->
+  <rect x="70" y="30" width="660" height="440" rx="14" fill="#0b121b" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1.5" filter="drop-shadow(0 25px 35px rgba(0,0,0,0.8))" />
+
+  <!-- Window Header -->
+  <rect x="70" y="30" width="660" height="42" rx="14" fill="#111c2a" />
+  <rect x="70" y="56" width="660" height="16" fill="#111c2a" />
+  
+  <circle cx="95" cy="51" r="5" fill="#ef4444" />
+  <circle cx="112" cy="51" r="5" fill="#f59e0b" />
+  <circle cx="129" cy="51" r="5" fill="#10b981" />
+
+  <!-- App Title & Portal Icon -->
+  <text x="160" y="56" font-family="sans-serif" font-weight="900" font-size="14" fill="#a3e635">RICK &amp; MORTY</text>
+  <text x="280" y="56" font-family="sans-serif" font-size="11" fill="#f59e0b">API Explorer</text>
+
+  <!-- Search & Filter Bar -->
+  <rect x="100" y="90" width="380" height="38" rx="8" fill="#162334" stroke="#253549" stroke-width="1" />
+  <text x="120" y="114" font-family="sans-serif" font-size="11" fill="#94a3b8">🔍 Buscar personaje (ej: Rick, Morty, Summer...)</text>
+
+  <!-- Filter Dropdown Button -->
+  <rect x="495" y="90" width="130" height="38" rx="8" fill="#162334" stroke="#f59e0b" stroke-opacity="0.4" stroke-width="1" />
+  <text x="560" y="113" font-family="sans-serif" font-size="11" fill="#e2e8f0" text-anchor="middle">Estado: Vivo ▾</text>
+
+  <!-- Total count pill -->
+  <rect x="635" y="90" width="70" height="38" rx="8" fill="#10b981" fill-opacity="0.15" stroke="#10b981" stroke-width="1" />
+  <text x="670" y="113" font-family="sans-serif" font-weight="bold" font-size="11" fill="#34d399" text-anchor="middle">826 API</text>
+
+  <!-- Character Cards Grid (3 Cards) -->
+  <!-- Character Card 1: Rick Sanchez -->
+  <g transform="translate(100, 150)">
+    <rect width="180" height="290" rx="10" fill="url(#cardGrad)" stroke="#223347" stroke-width="1" />
+    
+    <!-- Character Avatar Area -->
+    <rect width="180" height="150" rx="10" fill="#1e2e42" />
+    <rect y="130" width="180" height="20" fill="#1e2e42" />
+    <!-- Stylized Rick Face Illustration -->
+    <circle cx="90" cy="75" r="45" fill="#a5f3fc" opacity="0.3" />
+    <circle cx="90" cy="75" r="38" fill="#fef08a" opacity="0.4" />
+    <!-- Hair Spikes -->
+    <path d="M 60 70 L 40 40 L 70 50 L 90 20 L 110 50 L 140 40 L 120 70" stroke="#7dd3fc" stroke-width="3" fill="#bae6fd" />
+    <!-- Eyes -->
+    <circle cx="78" cy="72" r="8" fill="#ffffff" stroke="#334155" stroke-width="1" />
+    <circle cx="102" cy="72" r="8" fill="#ffffff" stroke="#334155" stroke-width="1" />
+    <circle cx="80" cy="72" r="3" fill="#0f172a" />
+    <circle cx="100" cy="72" r="3" fill="#0f172a" />
+    <!-- Unibrow -->
+    <path d="M 72 60 Q 90 55 108 60" stroke="#0284c7" stroke-width="3" fill="none" />
+    <!-- Drool -->
+    <circle cx="86" cy="94" r="3" fill="#4ade80" />
+
+    <!-- Status Badge -->
+    <rect x="12" y="12" width="60" height="20" rx="10" fill="#0f172a" opacity="0.85" />
+    <circle cx="22" cy="22" r="4" fill="#22c55e" />
+    <text x="32" y="25" font-family="sans-serif" font-weight="bold" font-size="8" fill="#22c55e">VIVO</text>
+
+    <!-- Card Info -->
+    <text x="15" y="178" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ffffff">Rick Sanchez</text>
+    <text x="15" y="194" font-family="sans-serif" font-size="9" fill="#94a3b8">Humano • Científico</text>
+
+    <text x="15" y="218" font-family="sans-serif" font-size="8" fill="#64748b">ÚLTIMA UBICACIÓN:</text>
+    <text x="15" y="232" font-family="sans-serif" font-weight="bold" font-size="9" fill="#f59e0b">Ciudadela de Ricks</text>
+
+    <text x="15" y="252" font-family="sans-serif" font-size="8" fill="#64748b">ORIGEN:</text>
+    <text x="15" y="266" font-family="sans-serif" font-size="9" fill="#cbd5e1">Tierra (C-137)</text>
+  </g>
+
+  <!-- Character Card 2: Morty Smith -->
+  <g transform="translate(310, 150)">
+    <rect width="180" height="290" rx="10" fill="url(#cardGrad)" stroke="#223347" stroke-width="1" />
+    
+    <!-- Character Avatar Area -->
+    <rect width="180" height="150" rx="10" fill="#1a2736" />
+    <rect y="130" width="180" height="20" fill="#1a2736" />
+    <circle cx="90" cy="75" r="42" fill="#fed7aa" opacity="0.4" />
+    <!-- Brown round hair -->
+    <ellipse cx="90" cy="65" rx="40" ry="32" fill="#78350f" />
+    <circle cx="90" cy="78" r="32" fill="#ffedd5" />
+    <!-- Eyes -->
+    <circle cx="78" cy="75" r="7" fill="#ffffff" stroke="#334155" stroke-width="1" />
+    <circle cx="102" cy="75" r="7" fill="#ffffff" stroke="#334155" stroke-width="1" />
+    <circle cx="79" cy="75" r="2.5" fill="#0f172a" />
+    <circle cx="101" cy="75" r="2.5" fill="#0f172a" />
+    <path d="M 82 92 Q 90 96 98 92" stroke="#78350f" stroke-width="1.5" fill="none" />
+
+    <!-- Status Badge -->
+    <rect x="12" y="12" width="60" height="20" rx="10" fill="#0f172a" opacity="0.85" />
+    <circle cx="22" cy="22" r="4" fill="#22c55e" />
+    <text x="32" y="25" font-family="sans-serif" font-weight="bold" font-size="8" fill="#22c55e">VIVO</text>
+
+    <!-- Card Info -->
+    <text x="15" y="178" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ffffff">Morty Smith</text>
+    <text x="15" y="194" font-family="sans-serif" font-size="9" fill="#94a3b8">Humano • Estudiante</text>
+
+    <text x="15" y="218" font-family="sans-serif" font-size="8" fill="#64748b">ÚLTIMA UBICACIÓN:</text>
+    <text x="15" y="232" font-family="sans-serif" font-weight="bold" font-size="9" fill="#f59e0b">Tierra (Reemplazo)</text>
+
+    <text x="15" y="252" font-family="sans-serif" font-size="8" fill="#64748b">ORIGEN:</text>
+    <text x="15" y="266" font-family="sans-serif" font-size="9" fill="#cbd5e1">Tierra (C-137)</text>
+  </g>
+
+  <!-- Character Card 3: Birdperson -->
+  <g transform="translate(520, 150)">
+    <rect width="180" height="290" rx="10" fill="url(#cardGrad)" stroke="#223347" stroke-width="1" />
+    
+    <!-- Character Avatar Area -->
+    <rect width="180" height="150" rx="10" fill="#182330" />
+    <rect y="130" width="180" height="20" fill="#182330" />
+    <circle cx="90" cy="75" r="40" fill="#fed7aa" opacity="0.3" />
+    <!-- Feather Wings & Mask -->
+    <path d="M 50 65 L 75 35 L 90 55 L 105 35 L 130 65" fill="#f59e0b" opacity="0.8" />
+    <circle cx="90" cy="80" r="30" fill="#fed7aa" />
+    <circle cx="80" cy="78" r="6" fill="#ffffff" />
+    <circle cx="100" cy="78" r="6" fill="#ffffff" />
+    <circle cx="81" cy="78" r="2.5" fill="#000" />
+    <circle cx="99" cy="78" r="2.5" fill="#000" />
+
+    <!-- Status Badge -->
+    <rect x="12" y="12" width="75" height="20" rx="10" fill="#0f172a" opacity="0.85" />
+    <circle cx="22" cy="22" r="4" fill="#f59e0b" />
+    <text x="32" y="25" font-family="sans-serif" font-weight="bold" font-size="8" fill="#f59e0b">RENACIDO</text>
+
+    <!-- Card Info -->
+    <text x="15" y="178" font-family="sans-serif" font-weight="bold" font-size="13" fill="#ffffff">Hombre Pájaro</text>
+    <text x="15" y="194" font-family="sans-serif" font-size="9" fill="#94a3b8">Alienígena • Guerrero</text>
+
+    <text x="15" y="218" font-family="sans-serif" font-size="8" fill="#64748b">ÚLTIMA UBICACIÓN:</text>
+    <text x="15" y="232" font-family="sans-serif" font-weight="bold" font-size="9" fill="#f59e0b">Planeta Squanch</text>
+
+    <text x="15" y="252" font-family="sans-serif" font-size="8" fill="#64748b">ORIGEN:</text>
+    <text x="15" y="266" font-family="sans-serif" font-size="9" fill="#cbd5e1">Mundo de los Pájaros</text>
+  </g>
+</svg>
